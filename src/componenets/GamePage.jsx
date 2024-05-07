@@ -32,7 +32,7 @@ export default function GamePage() {
       seterror("Please select a Number");
       return;
     }
-    const randomNo = Math.floor(Math.random() * 1 + 1);
+    const randomNo = Math.floor(Math.random() * 6 + 1);
     setcurrentDice(randomNo);
     if (selectedN == randomNo) {
       Setscore(score + randomNo);

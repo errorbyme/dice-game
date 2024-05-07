@@ -10,12 +10,11 @@ export default function App() {
   };
   return (
     <>
-      {/* {!isGameStarted ? (
+      {!isGameStarted ? (
         <StartPage toggleGamepage={toggleGamepage} />
       ) : (
         <GamePage />
-      )} */}
-      <GamePage />
+      )}
     </>
   );
 }
