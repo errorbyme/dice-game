@@ -14,10 +14,10 @@ export default function GamePage() {
   const [rulespage, Setrulespage] = useState(false);
   const [Hs, SetHs] = useState(0);
   var h = localStorage.getItem("Highest_score");
-  if (h === null || h == NaN) {
+  if (parseInt(h) === null || parseInt(h) == NaN) {
     localStorage.setItem("Highest_score", Hs);
   }
-  if (h >= Hs) {
+  if (parseInt(h) >= Hs) {
     SetHs(parseInt(h) + 1);
   }
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function GamePage() {
       seterror("Please select a Number");
       return;
     }
-    const randomNo = Math.floor(Math.random() * 6 + 1);
+    const randomNo = Math.floor(Math.random() * 1 + 1);
     setcurrentDice(randomNo);
     if (selectedN == randomNo) {
       Setscore(score + randomNo);
