@@ -14,7 +14,7 @@ export default function GamePage() {
   const [rulespage, Setrulespage] = useState(false);
   const [Hs, SetHs] = useState(0);
   var h = localStorage.getItem("Highest_score");
-  if (h === null) {
+  if (h === null || h == NaN) {
     localStorage.setItem("Highest_score", Hs);
   }
   if (h >= Hs) {
